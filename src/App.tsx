@@ -16,13 +16,18 @@ import Approvals from "./Company_Admin/Approvals";
 import Advances from "./Company_Admin/Advances";
 import Reports from "./Company_Admin/Reports";
 import EmployeeHome from "./Employee/EmployeeHome";
+import ForgotPassword from "./SignIn_Page/ForgotPassword";
+import ResetPassword from "./SignIn_Page/ResetPassword";
+import Contact from "./Landing_Page/Pages/Contact";
+import EmployeeLogin from "./Employee/EmployeeLogin";
+import Terms from "./Employee/Terms";
 
 
 
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-      {/* <Home/> */}
+      {/* <AdvanceModal/> */}
      
     <Routes>
       <Route>
@@ -30,6 +35,8 @@ export const App = () => (
         <Route path="home" element={<Home />} />
         <Route path="products" element={<Products />} />
         <Route path="signin" element={<SignIn />} />
+        <Route path="forgot-password" element={<ForgotPassword/>}/>
+        <Route path="reset-password" element={<ResetPassword/>}/>
         <Route path="registration" element={<Registration />} />
         <Route path="system-admin-menu" element={<SystemAdminMenu />} />
         <Route path="admin-dashboard" element={<AdminDashboard />}>
@@ -43,6 +50,11 @@ export const App = () => (
           </Route>
         <Route path="home" element={<CompanyHome/>} />
         <Route path="pricing" element={<Pricing/>} />
+        <Route path="contact" element={<Contact/>} />
+        <Route path="employee" element={<EmployeeLogin/>} />
+        <Route path="employee-home" element={<EmployeeHome/>} />
+        <Route path="terms-and-conditions" element={<Terms/>} />
+      
       </Route>
     </Routes>
   </ChakraProvider>

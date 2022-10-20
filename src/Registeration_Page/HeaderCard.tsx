@@ -9,7 +9,7 @@ export default function HeaderCard() {
         w={"full"}
         h={"200px"}
         bg={useColorModeValue("white", "gray.900")}
-        boxShadow={"2xl"}
+        // boxShadow={"2xl"}
         rounded={"md"}
         p={6}
         overflow={"hidden"}

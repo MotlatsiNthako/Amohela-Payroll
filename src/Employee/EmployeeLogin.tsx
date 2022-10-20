@@ -53,7 +53,7 @@ function SignIn() {
             <form onSubmit={handleSubmit}>
               <VStack spacing={4} align="flex-start" w="full">
                 <VStack spacing={1} align={["flex-start", "center"]} w="full">
-                  <Heading>Login</Heading>
+                  <Heading>Employee Login</Heading>
                 </VStack>
                 <FormControl isRequired>
                   <FormLabel htmlFor="email">E-mail Address</FormLabel>
@@ -96,21 +96,13 @@ function SignIn() {
                     colorScheme="green"
                     w={["full", "auto"]}
                     as={"a"}
-                    href={"admin-dashboard/admin"}
+                    href={"employee-home"}
                     // href={"system-admin-menu"}
                   >
                     Login
                   </Button>
                 </HStack>
                 <HStack w="full" justify="space-between">
-                  <Button
-                    as={"a"}
-                    href={"registration"}
-                    colorScheme="green"
-                    w={["full", "auto"]}
-                  >
-                    Create Account
-                  </Button>
                   <Text>
                     <Link color="green.600" href="forgot-password">
                     Forgot password?{" "}

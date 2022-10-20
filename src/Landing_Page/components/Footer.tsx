@@ -49,7 +49,7 @@ export default function Footer() {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Company</ListHeader>
-            <Link href={"#"}>Contact</Link>
+            <Link href={"contact"}>Contact</Link>
             <Link href={"#"}>Privacy and Terms</Link>
             <Link href={"#"}>Help Center</Link>
           </Stack>

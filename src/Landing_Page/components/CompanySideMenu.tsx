@@ -68,7 +68,7 @@ export function CompanySideMenu() {
       p="10"
       backgroundColor="#2A8C57"
       zIndex="popover"
-    ><Text textAlign="center" fontSize="2xl" fontFamily="monospace" fontWeight="bold" as={'a'}
+    ><Text textAlign="center" fontSize="2xl" fontWeight="bold" as={'a'}
     href={"admin"}>Amo</Text>
       <SideBarMenuItem
         link="company"

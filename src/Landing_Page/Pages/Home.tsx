@@ -75,7 +75,7 @@ function Home() {
         <HStack spacing={1} mt={100}>
           <Text
             position="absolute"
-            ml="48"
+            ml="180"
             fontFamily="Inter"
             fontStyle="normal"
             fontWeight="400"
@@ -108,7 +108,7 @@ function Home() {
         <HStack mt={150}>
           <Text
             position="absolute"
-            ml="100"
+            ml="130"
             fontFamily="Inter"
             fontStyle="normal"
             fontWeight="400"

@@ -275,7 +275,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Employees",
-    href: "employees",
+    href: "employee",
   },
 ];
 // const scrollTo = () => {

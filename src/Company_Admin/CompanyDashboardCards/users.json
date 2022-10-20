@@ -1,0 +1,26 @@
+{
+    "success": true,
+    "data": [
+        {
+            "name": "Pokola",
+            "surname": "LINEO",
+            "id": 1,
+            "phoneNumber": "+266565473524",
+            "location": "Makhalong"
+        },
+        {
+            "name": "Paballo",
+            "surname": "Tebalo",
+            "id": 3,
+            "phoneNumber": "+26678565678",
+            "location": "Motseng"
+        },
+        {
+            "name": "Thabang",
+            "surname": "Pitso",
+            "id": 3,
+            "phoneNumber": "+26656005678",
+            "location": "Taung"
+        }
+    ]
+}
