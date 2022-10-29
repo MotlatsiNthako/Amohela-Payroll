@@ -1,0 +1,25 @@
+{
+    "success": true,
+    "data": [
+        {
+            "phoneNumber": "+26650936472",
+            "employeeNumber": "001",
+            "amount": "500"
+        },
+        {
+            "phoneNumber": "+26663797106",
+            "employeeNumber": "002",
+            "amount": "1000"
+        },
+        {
+            "phoneNumber": "+26658149614",
+            "employeeNumber": "003",
+            "amount": "004"
+        },
+        {
+            "phoneNumber": "+26659887412",
+            "employeeNumber": "005",
+            "amount": "1200"
+        }
+    ] 
+}

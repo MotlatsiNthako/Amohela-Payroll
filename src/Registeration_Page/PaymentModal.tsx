@@ -21,7 +21,7 @@ interface ModalProps {
   isOpen: boolean;
 }
 
-const RegistrationModal: FC<ModalProps> = ({ onClose, onOpen, isOpen }) => {
+const PaymentModal: FC<ModalProps> = ({ onClose, onOpen, isOpen }) => {
   return (
     <>
       <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
@@ -31,46 +31,26 @@ const RegistrationModal: FC<ModalProps> = ({ onClose, onOpen, isOpen }) => {
             <ModalCloseButton />
           </ModalHeader>
           <ModalBody>
-            <Heading>Add Employee</Heading>
+            <Heading>Payment</Heading>
             <form>
               <HStack spacing={2}>
                 <FormControl>
-                  <FormLabel>Employee Name</FormLabel>
+                  <FormLabel>From</FormLabel>
                   <Input type="text"></Input>
                 </FormControl>
                 <FormControl>
-                  <FormLabel>Email Address</FormLabel>
-                  <Input type="email"></Input>
-                </FormControl>
-              </HStack>
-              <HStack spacing={2}>
-                <FormControl>
-                  <FormLabel>Date of Birth</FormLabel>
-                  <Input type="date"></Input>
-                </FormControl>
-                <FormControl>
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel>To</FormLabel>
                   <Input type="text"></Input>
                 </FormControl>
               </HStack>
               <HStack spacing={2}>
                 <FormControl>
-                  <FormLabel>Department</FormLabel>
+                  <FormLabel>Employee name</FormLabel>
                   <Input type="text"></Input>
                 </FormControl>
                 <FormControl>
-                  <FormLabel>Position</FormLabel>
+                  <FormLabel>Amount</FormLabel>
                   <Input type="text"></Input>
-                </FormControl>
-              </HStack>
-              <HStack>
-                <FormControl>
-                  <FormLabel>Net Pay</FormLabel>
-                  <Input type="text"></Input>
-                </FormControl>
-                <FormControl>
-                  <FormLabel>Password</FormLabel>
-                  <Input type="email"></Input>
                 </FormControl>
               </HStack>
             </form>
@@ -91,4 +71,4 @@ const RegistrationModal: FC<ModalProps> = ({ onClose, onOpen, isOpen }) => {
   );
 };
 
-export default RegistrationModal;
+export default PaymentModal;

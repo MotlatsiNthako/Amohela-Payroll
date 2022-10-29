@@ -20,6 +20,7 @@ import {
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import RegistrationModal from "../Registeration_Page/RegistrationModal";
+import PaymentModal from "../Registeration_Page/PaymentModal";
 import employeesData from "./CompanyDashboardCards/users.json";
 
 type Employee = {
@@ -36,7 +37,7 @@ function Employees() {
 
   // Remove  line 39 while api is ready
 
-  const employee = employeesData.data;  
+  const employee = employeesData.data;
   const fetchEmployees = async () => {
     const response = await axios
       .get("https://fakestoreapi.com/users")
@@ -63,7 +64,7 @@ function Employees() {
             <Thead>
               <Tr>
                 <Th>Name</Th>
-                <Th isNumeric>Emp ID</Th>
+                <Th>Emp ID</Th>
                 <Th>Position</Th>
                 <Th>Department</Th>
                 <Th isNumeric>Gross Pay</Th>
@@ -85,9 +86,6 @@ function Employees() {
                       <Td>{users.id}</Td>
                       <Td>{users.phoneNumber}</Td>
                       <Td>{users.location}</Td>
-                      {/* <Td isNumeric>20 000.00</Td>
-                      <Td isNumeric>2 310.10</Td>
-                      <Td isNumeric>17 689.90</Td> */}
                     </Tr>
                   );
                 })}
@@ -95,7 +93,7 @@ function Employees() {
             <Tfoot>
               <Tr>
                 <Th>Name</Th>
-                <Th isNumeric>Emp ID</Th>
+                <Th>Emp ID</Th>
                 <Th>Position</Th>
                 <Th>Department</Th>
                 <Th isNumeric>Gross Pay</Th>
@@ -116,6 +114,7 @@ function Employees() {
         </Button>
 
         <RegistrationModal onOpen={onOpen} onClose={onClose} isOpen={isOpen} />
+        {/* <PaymentModal onOpen={onOpen} onClose={onClose} isOpen={isOpen} /> */}
       </HStack>
     </Box>
   );

@@ -28,7 +28,7 @@ function CompanyHome() {
     <Box bg="#C4EEDF" ml="202px">
       <Box width="432px" height="56px" pl="50px" pt="10px">
         <InputGroup>
-          <Input variant="filled" placeholder="Search Employee" />
+          <Input bg="white" placeholder="Search Employee" />
           <InputRightElement children={<FaSearch />} />
         </InputGroup>
       </Box>
@@ -40,7 +40,7 @@ function CompanyHome() {
             fontWeight={400}
             variant={"link"}
             href={""}
-            color="#000000"
+            color='black.50'
           >
             Log Out
           </Button>
