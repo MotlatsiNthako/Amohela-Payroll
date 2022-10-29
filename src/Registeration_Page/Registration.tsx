@@ -1,4 +1,3 @@
-import { CheckIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -7,14 +6,9 @@ import {
   FormLabel,
   Heading,
   Input,
-  InputGroup,
-  InputLeftElement,
-  InputRightElement,
   FormHelperText,
-  Flex,
   useToast,
   Select,
-  Text,
   VStack,
 } from "@chakra-ui/react";
 import Footer from "../Landing_Page/components/Footer";
