@@ -132,7 +132,7 @@ function Registration() {
               <FormControl>
                 <FormLabel>Company Name</FormLabel>
                 <Input
-                  type="companyName"
+                  type="text"
                   id="companyName"
                   placeholder="Company name"
                   aria-describedby="companyName-helper-text"
@@ -152,7 +152,7 @@ function Registration() {
               <FormControl>
                 <FormLabel>Company Industry</FormLabel>
                 <Input
-                  type="industry"
+                  type="text"
                   id="industry"
                   placeholder="Company industry"
                   aria-describedby="industry-helper-text"
@@ -172,7 +172,7 @@ function Registration() {
               <FormControl>
                 <FormLabel>Company Location</FormLabel>
                 <Input
-                  type="location"
+                  type="text"
                   id="location"
                   placeholder="Company location"
                   aria-describedby="location-helper-text"
@@ -209,7 +209,6 @@ function Registration() {
                 <Select
                   id="country"
                   placeholder="Select Country"
-                  variant="filled"
                   {...register("country", { required: true })}
                 >
                   <option value="Lesotho">Lesotho</option>
@@ -225,7 +224,6 @@ function Registration() {
                 <Input
                   type="number"
                   id="phone"
-                  variant="filled"
                   placeholder="Phone Number"
                   aria-describedby="number-helper-text"
                   {...register("phoneNumber", {
@@ -244,11 +242,12 @@ function Registration() {
                 </FormHelperText>
               </FormControl>
               <FormControl>
-                <FormLabel htmlFor="Country Name">Company Contract</FormLabel>
+                <FormLabel htmlFor="Company Contract">
+                  Company Contract
+                </FormLabel>
                 <Select
                   id="contractType"
                   placeholder="Select Contract"
-                  variant="filled"
                   {...register("contractType", { required: true })}
                 >
                   <option value="Basic">Basic</option>
@@ -266,7 +265,6 @@ function Registration() {
                   type="password"
                   id="password"
                   placeholder="Password"
-                  variant="filled"
                   aria-describedby="password-helper-text"
                   {...register("password", {
                     required: true,
