@@ -21,20 +21,20 @@ import { useForm } from "react-hook-form";
 import { Stack } from "@chakra-ui/react";
 
 type RegistrationValues = {
-  companyName: string;
-  industry: string;
-  location: string;
-  date: string;
-  country: string;
-  phoneNumber: string;
-  contractType: string;
-  password: string;
+  CompanyName: string;
+  CompanyIndustry: string;
+  CompanyLocation: string;
+  PayrollDate: Date;
+  BaseCountry: string;
+  PhoneNumber: number;
+  ContractType: string;
+  Password: string;
 };
 function Registration() {
   const [loginStatus, setLoginStatus] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const REGISTRATION_URL = "/api/v1/user";
+  const REGISTRATION_URL = "http://13.233.138.67:3000/company";
   const toast = useToast();
   const {
     register,
@@ -61,21 +61,21 @@ function Registration() {
         .post(
           REGISTRATION_URL,
           {
-            companyName: mydata.companyName,
-            industry: mydata.industry,
-            location: mydata.location,
-            date: mydata.date,
-            country: mydata.country,
-            phoneNumber: mydata.phoneNumber,
-            contractType: mydata.contractType,
-            password: mydata.password,
+            CompanyName: mydata.CompanyName,
+            CompanyIndustry: mydata.CompanyIndustry,
+            CompanyLocation: mydata.CompanyLocation,
+            PayrollDate: mydata.PayrollDate,
+            BaseCountry: mydata.BaseCountry,
+            PhoneNumber: mydata.PhoneNumber,
+            ContractType: mydata.ContractType,
+            Password: mydata.Password,
           },
           {
             headers: { "Content-Type": "application/json" },
           }
         )
         .then((response) => {
-          if (response.status >= 200 && response.status < 300) {
+          if (response.status >= 201 && response.status < 300) {
             setLoading(false);
             reset();
             showToast();
@@ -133,19 +133,19 @@ function Registration() {
                 <FormLabel>Company Name</FormLabel>
                 <Input
                   type="text"
-                  id="companyName"
+                  id="CompanyName"
                   placeholder="Company name"
-                  aria-describedby="companyName-helper-text"
-                  {...register("companyName", {
+                  aria-describedby="CompanyName-helper-text"
+                  {...register("CompanyName", {
                     required: true,
                     maxLength: 30,
                   })}
                 />
                 <FormHelperText color="red">
-                  {errors.companyName?.type === "required" &&
+                  {errors.CompanyName?.type === "required" &&
                     "Company name is required"}
 
-                  {errors.companyName?.type === "maxLength" &&
+                  {errors.CompanyName?.type === "maxLength" &&
                     "Required name maxLength is 30"}
                 </FormHelperText>
               </FormControl>
@@ -156,16 +156,16 @@ function Registration() {
                   id="industry"
                   placeholder="Company industry"
                   aria-describedby="industry-helper-text"
-                  {...register("industry", {
+                  {...register("CompanyIndustry", {
                     required: true,
                     maxLength: 30,
                   })}
                 />
                 <FormHelperText color="red">
-                  {errors.industry?.type === "required" &&
+                  {errors.CompanyIndustry?.type === "required" &&
                     "Company industry is required"}
 
-                  {errors.industry?.type === "maxLength" &&
+                  {errors.CompanyIndustry?.type === "maxLength" &&
                     "Required name maxLength is 30"}
                 </FormHelperText>
               </FormControl>
@@ -176,16 +176,16 @@ function Registration() {
                   id="location"
                   placeholder="Company location"
                   aria-describedby="location-helper-text"
-                  {...register("location", {
+                  {...register("CompanyLocation", {
                     required: true,
                     maxLength: 30,
                   })}
                 />
                 <FormHelperText color="red">
-                  {errors.location?.type === "required" &&
+                  {errors.CompanyLocation?.type === "required" &&
                     "Company location is required"}
 
-                  {errors.location?.type === "maxLength" &&
+                  {errors.CompanyLocation?.type === "maxLength" &&
                     "Required name maxLength is 30"}
                 </FormHelperText>
               </FormControl>
@@ -196,12 +196,13 @@ function Registration() {
                   type="date"
                   id="date"
                   aria-describedby="date-helper-text"
-                  {...register("date", {
+                  {...register("PayrollDate", {
                     required: true,
                   })}
                 />
                 <FormHelperText color="red">
-                  {errors.password?.type === "required" && "Date is required"}
+                  {errors.PayrollDate?.type === "required" &&
+                    "Date is required"}
                 </FormHelperText>
               </FormControl>
               <FormControl>
@@ -209,13 +210,13 @@ function Registration() {
                 <Select
                   id="country"
                   placeholder="Select Country"
-                  {...register("country", { required: true })}
+                  {...register("BaseCountry", { required: true })}
                 >
                   <option value="Lesotho">Lesotho</option>
                   <option value="Botwsana">Botwsana</option>
                 </Select>
                 <FormHelperText color="red">
-                  {errors.country?.type === "required" &&
+                  {errors.BaseCountry?.type === "required" &&
                     "Country name is required"}
                 </FormHelperText>
               </FormControl>
@@ -226,18 +227,18 @@ function Registration() {
                   id="phone"
                   placeholder="Phone Number"
                   aria-describedby="number-helper-text"
-                  {...register("phoneNumber", {
+                  {...register("PhoneNumber", {
                     required: true,
                     minLength: 8,
                     maxLength: 12,
                   })}
                 />
                 <FormHelperText color="red">
-                  {errors.phoneNumber?.type === "required" &&
+                  {errors.PhoneNumber?.type === "required" &&
                     "Phone number is required"}
-                  {errors.phoneNumber?.type === "minLength" &&
+                  {errors.PhoneNumber?.type === "minLength" &&
                     "Phone numbers must include at least 8 numbers"}
-                  {errors.phoneNumber?.type === "maxLength" &&
+                  {errors.PhoneNumber?.type === "maxLength" &&
                     "Entered number is more than 12 digits"}
                 </FormHelperText>
               </FormControl>
@@ -248,14 +249,14 @@ function Registration() {
                 <Select
                   id="contractType"
                   placeholder="Select Contract"
-                  {...register("contractType", { required: true })}
+                  {...register("ContractType", { required: true })}
                 >
                   <option value="Basic">Basic</option>
                   <option value="Premium">Premium</option>
                   <option value="Contract">Contract</option>
                 </Select>
                 <FormHelperText color="red">
-                  {errors.country?.type === "required" &&
+                  {errors.ContractType?.type === "required" &&
                     "Contract Type is required"}
                 </FormHelperText>
               </FormControl>
@@ -266,7 +267,7 @@ function Registration() {
                   id="password"
                   placeholder="Password"
                   aria-describedby="password-helper-text"
-                  {...register("password", {
+                  {...register("Password", {
                     required: true,
                     pattern:
                       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{10,30}$/,
@@ -275,13 +276,13 @@ function Registration() {
                   })}
                 />
                 <FormHelperText color="red">
-                  {errors.password?.type === "required" &&
+                  {errors.Password?.type === "required" &&
                     "Password is required"}
-                  {errors.password?.type === "minLength" &&
+                  {errors.Password?.type === "minLength" &&
                     "Required Password minLength is 10"}
-                  {errors.password?.type === "maxLength" &&
+                  {errors.Password?.type === "maxLength" &&
                     "Required Password maxLength is 30"}
-                  {errors.password?.type === "pattern" &&
+                  {errors.Password?.type === "pattern" &&
                     "Password should at least include 1 Symbol,1 Uppercase, 1 Lowercase & 1 Number"}
                 </FormHelperText>
               </FormControl>

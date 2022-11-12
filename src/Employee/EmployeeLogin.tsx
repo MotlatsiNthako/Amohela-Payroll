@@ -63,7 +63,6 @@ function SignIn() {
                     id="email"
                     name="email"
                     type="email"
-                    variant="filled"
                     pattern="('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')"
                     // onChange={(e) => setEmail(e.target.value)}
                   />
@@ -78,7 +77,6 @@ function SignIn() {
                     id="password"
                     name="password"
                     type="password"
-                    variant="filled"
                     validate={(value: string) => {
                       let error;
 
@@ -106,7 +104,7 @@ function SignIn() {
                 <HStack w="full" justify="space-between">
                   <Text>
                     <Link color="green.600" href="forgot-password">
-                    Forgot password?{" "}
+                      Forgot password?{" "}
                     </Link>
                   </Text>
                 </HStack>
