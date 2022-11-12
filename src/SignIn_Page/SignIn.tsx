@@ -9,7 +9,6 @@ import {
   Text,
   useToast,
   FormHelperText,
-
 } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
@@ -71,7 +70,7 @@ function SignIn() {
             setLoading(false);
             reset();
             showToast();
-            navigate("/dashboard");
+            navigate("/admin-dashboard");
           }
         });
     } catch (err: any) {
