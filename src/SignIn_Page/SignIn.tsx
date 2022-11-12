@@ -24,7 +24,7 @@ type FormValues = {
 };
 
 function SignIn() {
-  const LOGIN_URL = "/api/v1/user/login";
+  const LOGIN_URL = "#";
   const navigate = useNavigate();
   const [loginStatus, setLoginStatus] = useState("");
   const [loading, setLoading] = useState(false);

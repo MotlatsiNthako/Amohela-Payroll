@@ -67,9 +67,9 @@ function Employees() {
                 <Th>Emp ID</Th>
                 <Th>Position</Th>
                 <Th>Department</Th>
-                <Th isNumeric>Gross Pay</Th>
-                <Th isNumeric>Deductions</Th>
-                <Th isNumeric>Net Pay</Th>
+                <Th>Gross Pay</Th>
+                <Th>Deductions</Th>
+                <Th>Net Pay</Th>
               </Tr>
             </Thead>
             <Tbody>
@@ -86,6 +86,9 @@ function Employees() {
                       <Td>{users.id}</Td>
                       <Td>{users.phoneNumber}</Td>
                       <Td>{users.location}</Td>
+                      <Td>{users.grossPay}</Td>
+                      <Td>{users.deductions}</Td>
+                      <Td>{users.netPay}</Td>
                     </Tr>
                   );
                 })}
@@ -96,9 +99,9 @@ function Employees() {
                 <Th>Emp ID</Th>
                 <Th>Position</Th>
                 <Th>Department</Th>
-                <Th isNumeric>Gross Pay</Th>
-                <Th isNumeric>Deductions</Th>
-                <Th isNumeric>Net Pay</Th>
+                <Th>Gross Pay</Th>
+                <Th>Deductions</Th>
+                <Th>Net Pay</Th>
               </Tr>
             </Tfoot>
           </Table>

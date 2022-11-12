@@ -68,9 +68,10 @@ function EmployeeHome() {
           <Text>Position: Technician</Text>
         </VStack>
         <HStack w="full" justify="space-between" mt="20px">
-          <Checkbox borderColor="green">
-            <Link href="terms-and-conditions" >Agree to terms and conditions.</Link>
-          </Checkbox>
+          <Checkbox borderColor="green"></Checkbox>
+          <Link color="green.600" id="terms" to="/terms-and-conditions">
+            Agree to terms and conditions.
+          </Link>
           <Button colorScheme="green" onClick={onOpen}>
             Request Pay
           </Button>

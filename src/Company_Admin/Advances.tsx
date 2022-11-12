@@ -20,6 +20,7 @@ type Advance = {
   phoneNumber: string;
   employeeNumber: string;
   amount: string;
+  status: string;
 };
 
 function Advances() {
@@ -70,6 +71,9 @@ function Advances() {
                       </Td>
                       <Td>
                         <Text>{requests.amount}</Text>
+                      </Td>
+                      <Td>
+                        <Text>{requests.status}</Text>
                       </Td>
                     </Tr>
                   );

@@ -6,21 +6,31 @@
             "surname": "LINEO",
             "id": 1,
             "phoneNumber": "+266565473524",
-            "location": "Makhalong"
+            "location": "Makhalong",
+            "grossPay": "20 000",
+            "deductions":"3000",
+            "netPay": "17 000"
+
         },
         {
             "name": "Paballo",
             "surname": "Tebalo",
             "id": 3,
             "phoneNumber": "+26678565678",
-            "location": "Motseng"
+            "location": "Motseng",
+            "grossPay": "20 000",
+            "deductions":"3000",
+            "netPay": "17 000"
         },
         {
             "name": "Thabang",
             "surname": "Pitso",
             "id": 3,
             "phoneNumber": "+26656005678",
-            "location": "Taung"
+            "location": "Taung",
+            "grossPay": "20 000",
+            "deductions":"3000",
+            "netPay": "17 000"
         }
     ]
 }
