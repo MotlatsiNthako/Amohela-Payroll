@@ -176,8 +176,8 @@ function SignIn() {
                 type="submit"
                 isLoading={loading}
                 loadingText="Submitting"
-                // as={"a"}
-                // href={"admin-dashboard/company"}
+                as={"a"}
+                href={"admin-dashboard/company"}
               >
                 Login
               </Button>

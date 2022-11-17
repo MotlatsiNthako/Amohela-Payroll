@@ -109,15 +109,15 @@ function Employees() {
       </>
       <br />
       <HStack spacing={750} pl={2}>
-        <Button colorScheme="green" leftIcon={<CheckIcon />}>
+        <Button onClick={onOpen} colorScheme="green" leftIcon={<CheckIcon />}>
           Process Payment
         </Button>
         <Button colorScheme="green" onClick={onOpen} leftIcon={<AddIcon />}>
           Add Employee
         </Button>
 
-        <RegistrationModal onOpen={onOpen} onClose={onClose} isOpen={isOpen} />
-        {/* <PaymentModal onOpen={onOpen} onClose={onClose} isOpen={isOpen} /> */}
+        {/* <RegistrationModal onOpen={onOpen} onClose={onClose} isOpen={isOpen} /> */}
+        <PaymentModal onOpen={onOpen} onClose={onClose} isOpen={isOpen} />
       </HStack>
     </Box>
   );
